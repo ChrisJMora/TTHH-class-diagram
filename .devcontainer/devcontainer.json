@@ -8,7 +8,7 @@
      "vscode": {
          "extensions": [
              "GitHub.copilot",
-             "PlantUML"
+             "jebbs.plantuml"
          ]
      }
  }
