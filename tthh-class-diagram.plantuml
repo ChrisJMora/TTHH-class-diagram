@@ -1,2 +1,12 @@
 @startuml TTHHH
+
+class Usuario{
+    codigo : int
+}
+
+class Compania{
+    codigo: int
+    nombre: string
+}
+
 @enduml
