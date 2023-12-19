@@ -1,0 +1,16 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+  ,
+   // Add the IDs of extensions you want installed when the container is created.
+ "customizations": {
+     "vscode": {
+         "extensions": [
+             "GitHub.copilot",
+             "PlantUML"
+         ]
+     }
+ }
+  
+}
