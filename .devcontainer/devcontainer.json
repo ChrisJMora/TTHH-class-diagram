@@ -1,18 +1,21 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  }
-  ,
-   // Add the IDs of extensions you want installed when the container is created.
- "customizations": {
-     "vscode": {
-         "extensions": [
-             "GitHub.copilot",
-             "jebbs.plantuml",
-             "well-ar.plantuml",
-             "qhoekman.language-plantuml"
-         ]
-     }
- }
-  
+    "name": "PlantUML",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "PLANTUML_VERSION": "1.2023.14beta1"
+        }
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "jebbs.plantuml"
+    ],
+    "forwardPorts": [
+        8080
+    ],
+    "appPort": 8080,
+    "postCreateCommand": "java -jar /usr/local/plantuml/plantuml.jar -version"
 }
