@@ -15,7 +15,76 @@ package Acceso{
 }
 
 package Seleccionar{
-    class Empleado
+    class Empleado{
+        codigo: int
+        apellidoPaterno: string
+        apellidoMaterno: string
+        nombres: string
+        numeroCedula: string
+        direccion: string
+        telefono1: int
+        telefono2: int
+        carnetIESS: int
+        fechaNacimiento: date
+        fechaIngreso: date
+        cuentaBancaria: string
+        banco: string
+        boniEspecial: double
+        sueldoBase: double
+        fondoReserva: double
+        reIngreso: bool
+        fechaReIngreso: date
+    }
+}
+
+package Seleccionar.Catalogos{
+
+    enum TipoTrabajador <<enumeration>>{
+        ADMINISTRATIVO
+        FINANZAS
+        VENTAS
+        PRODUCCION
+        MANTENIMIENTO
+        SEGURIDAD
+        LIMPIEZA
+    }
+
+    enum StatusTrabajador <<enumeration>>{
+        ACTIVO
+        INACTIVO
+    }
+
+    enum TipoContrato <<enumeration>>{
+        INDEFINIDO
+        PLAZO_FIJO
+        TEMPORAL
+        JORNADA_PARCIAL
+    }
+
+    enum TipoComision <<enumeration>>{
+        BLANCO
+        VENTAS
+        CANTIDAD
+        BENEFICIO
+    }
+
+    enum EstadoCivil <<enumeration>>{
+        SOLTERO
+        CASADO
+        DIVORCIADO
+        VIUDO
+    }
+
+    enum TipoCuenta <<enumeration>>{
+        AHORROS
+        CORRIENTE
+    }
+
+    enum Sexo <<enumeration>>{
+        MASCULINO
+        FEMENINO
+    }
+
 }
 
 package Mantenimiento{
@@ -80,8 +149,8 @@ package Mantenimiento{
 package Mantenimiento.Catalogos{
 
     enum TipoOperacion <<enumeration>>{
-        Ingresos
-        Egresos
+        INGRESOS
+        EGRESOS
     }
 
 }
