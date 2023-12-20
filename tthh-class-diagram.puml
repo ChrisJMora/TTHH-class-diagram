@@ -1,0 +1,82 @@
+@startuml TTHHH
+
+class Usuario{
+    -codigo : int
+    -password: string
+}
+
+class Compania{
+    -codigo: int
+    -nombre: string
+    -direccion: string
+}
+
+package Mantenimiento{
+
+    class CentroCostos{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class ConceptoNomina{
+        -codigo: int
+        -descripcion: string
+        -prioridad: int
+        -grabadoIESS: bool
+        -trabAfecImpRenta: bool
+        -movExcepcion: int
+        -emprsAfecIESS: bool
+    }
+
+    class CategoriaOcupacional{
+        -codigo : int
+        -descripcion : string
+    }
+
+    class RegistroHistoricoNomina{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class GestionCuentasContable{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class CambiarCierreNomina{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class NivelSalarial{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class ParametrosPersonal{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class Ocupaciones{
+        -codigo: int
+        -descripcion: string
+    }
+
+    class Correlativos{
+        -codigo: int
+        -descripcion: string
+    }
+
+}
+
+package Mantenimiento.Catalogos{
+
+    enum TipoOperacion <<enumeration>>{
+        Ingresos
+        Egresos
+    }
+    
+}
+
+@enduml
