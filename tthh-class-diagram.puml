@@ -1,14 +1,21 @@
 @startuml TTHHH
 
-class Usuario{
-    -codigo : int
-    -password: string
+package Acceso{
+
+    class Usuario{
+        -codigo : int
+        -password: string
+    }
+
+    class Compania{
+        -codigo: int
+        -nombre: string
+        -direccion: string
+    }
 }
 
-class Compania{
-    -codigo: int
-    -nombre: string
-    -direccion: string
+package Seleccionar{
+    class Empleado
 }
 
 package Mantenimiento{
@@ -76,7 +83,7 @@ package Mantenimiento.Catalogos{
         Ingresos
         Egresos
     }
-    
+
 }
 
 @enduml
